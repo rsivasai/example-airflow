@@ -5,7 +5,7 @@ steps:
   entrypoint: /bin/sh
   args:
   - -c
-  - 'pip3 install pytest && pip3 install -r requirements.txt && pytest test/*_test.py'
+  - 'pip3 install pytest && pip3 install -r requirements.txt && pytest test/*_test.py --no-deps' 
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
   id: Deploy
   entrypoint: bash
